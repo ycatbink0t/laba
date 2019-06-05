@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web-based DMS v0.1</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'dms/main.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="{% static 'dms/main.js'%}"></script>
+</head>
+<body>
+    <p>Version 0.1 test</p>
+    <div class="adduser">
+        <a href="/dms/adduser">Add user</a>
+    </div>
+    <div class="logout">
+        <a href="/dms/logout">Logout</a>
+    </div>
+    Search
+    <input type="text" onchange="search()" id="search">
+    <div class="table_names">
+        <table>
+            <tr>
+                {% for table in table_names %}
+                    <td>
+                        <a class="tables" onclick="on_table_change(this)">
+                            {{ table }}
+                        </a>
+                    </td>
+                {% endfor %}
+            </tr>
+        </table>
+    </div>
+    <div id="tables">
+
+    </div>
+</body>
+</html>
