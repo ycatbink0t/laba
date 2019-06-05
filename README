@@ -1,0 +1,5 @@
+Pre-pre-pre-pre alfa version of my app. Nothing special, just testing some new (for me) technologies. 
+
+Before 'python manage.py runserver' you have to configure etc/cfg.cnf for your mysql db and migrate.
+
+I left this project ~1 month ago.
